@@ -1,0 +1,15 @@
+str_arr = input("Enter numbers separated by spaces: ")
+str_arr = str_arr.split(" ")
+
+arr = [int(x) for x in str_arr]
+print(f"Original List: {arr}")
+print(f"Sum: {sum(arr)}")
+print(f"Average: {round(sum(arr)/len(arr), 3)}")
+print(f"Max: {max(arr)}, Min: {min(arr)}")
+set_arr = set(arr)
+arr = list(set_arr)
+print(f"Without duplicates: {arr}")
+sorted_arr = sorted(arr)
+print(f"Sorted (asc): {sorted_arr}")
+print(f"Even numbers: {[x for x in arr if x%2 == 0]}")
+print(f"Odd numbers: {[x for x in arr if x%2 != 0]}")
